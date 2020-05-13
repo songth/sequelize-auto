@@ -4,6 +4,8 @@
 
 You can find the official version [here(sequelize-auto)](https://github.com/sequelize/sequelize-auto).
 
+[한글 설명서](KOREAN.md)
+
 ## My changes
   
 * Sequelize version 5 support
