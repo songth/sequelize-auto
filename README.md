@@ -1,3 +1,9 @@
+# Important 
+
+
+This repository is a duplicate.
+You can find the official version [here(sequelize-auto)](https://github.com/sequelize/sequelize-auto).
+
 # Sequelize-Auto
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/sequelize/sequelize-auto.svg)](https://greenkeeper.io/)
