@@ -1,10 +1,10 @@
-# Important (My changes)
+# Important
 
-This repository is a duplicate.
+**This repository is a duplicate.**
 
 You can find the official version [here(sequelize-auto)](https://github.com/sequelize/sequelize-auto).
 
-## Changes
+## My changes
   
 * Sequelize version 5 support
 * snake case fields support 
@@ -20,6 +20,8 @@ You can find the official version [here(sequelize-auto)](https://github.com/sequ
 
 
 ## Output Syntax (typescript)
+
+[sequelize v5 official document](https://sequelize.org/master/manual/typescript.html#usage-of--code-sequelize-define--code-)
 
 ```js
 // We need to declare an interface for our model that is basically what our class would be
