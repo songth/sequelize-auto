@@ -14,24 +14,33 @@ You can find the official version [here(sequelize-auto)](https://github.com/sequ
 * -S ( Use snake case to name fields )
 * -v \[version\] ( Sequelize version ) 
 
-## Output Syntax
+## Usage
+
+    [node] sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName] -C -S -v 5
+
+
+## Output Syntax (typescript)
 
 ```js
 // We need to declare an interface for our model that is basically what our class would be
-interface MyModel extends Model {
+interface groupInfoModel extends Model {
   readonly id: number;
 }
 
 // Need to declare the static model so `findOne` etc. use correct types.
-type MyModelStatic = typeof Model & {
-  new (values?: object, options?: BuildOptions): MyModel;
+type groupInfoModelStatic = typeof Model & {
+  new (values?: object, options?: BuildOptions): groupInfoModel;
 }
 
 // TS can't derive a proper class definition from a `.define` call, therefor we need to cast here.
-const MyDefineModel = <MyModelStatic>sequelize.define('MyDefineModel', {
+const MyDefineModel = <groupInfoStatic>sequelize.define('MyDefineModel', {
   id: {
     primaryKey: true,
     type: DataTypes.INTEGER.UNSIGNED,
+  },
+  access_token: {
+    type: DataTypes.STRING(100),
+    field: 'accessToken'
   }
 });
 ```
