@@ -96,3 +96,18 @@ module.exports = function(sequelize: sequelize.Sequelize, DataTypes: DataTypes) 
 
 ```
 
+## 프로젝트에서 이용하는 방법
+
+공식 사용법과 동일하나 개별모듈만 이용하는 경우가 다르니 주의하시기 바랍니다.
+
+```js
+// 모든 모델 
+import * as dbTables from './models/db.tables';
+const tables:dbTables.ITables = dbTables.getModels(sequelize); //:dbTables.ITable
+tables.groupInfo.findAll
+
+// 개별 모델만 이용
+import * as dbDef from './models/db.d';
+const groupInfo:dbDef.groupInfoModelStatic = sequelize.import('./models/groupInfo');
+groupInfo.findAll
+```
